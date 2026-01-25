@@ -1,4 +1,4 @@
-# 👋 Hi, I’m <Your Name>
+# 👋 Hi, I’m Doston Abdullayev
 
 Welcome to my technical write-ups repository.
 
