@@ -2,10 +2,10 @@
 
 Welcome to my technical write-ups repository.
 
-This site contains notes, deep dives, and hands-on write-ups on:
--hackthebox 
--technical write ups related to IT and cyber security
+This site contains notes, deep dives, and hands-on write-ups on:<br>
+-hackthebox<br>
+-technical write ups related to IT and cyber security<br>
 
-More about me: (offsec1337.com)[offsec1337.com]
+More about me: [offsec1337.com](https://offsec1337.com/)
 
 All content is written in Markdown and published using GitHub Pages.
