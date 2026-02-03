@@ -1,6 +1,6 @@
 # CodePartTwo from hackthebox
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/d92aba2d-bf2d-4636-aecf-f81292a43078" /><br>
-This machines vunerable to CVE-2024-39205 bypassing sandbox using RCE we will get app user shell then from sql database we can crack password hash of another user and finally manipulating .conf file of backup tool we can get root user. [More about author](https://offsec1337.com)
+This machines vunerable to CVE-2024-39205 bypassing sandbox using RCE we will get app user shell then from sql database we can crack password hash of another user and finally manipulating .conf file of backup tool we can get root user. More about author: [offsec1337.com](https://offsec1337.com)
 
 ## Enumeration<br>
 First I tried to gather information starting with nmap:
