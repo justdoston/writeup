@@ -69,9 +69,9 @@ After getting a shell we can see there is app and marco user:
 
 However inside `instance` directory from `/home/app/app/instance` we have `users.db` which we can enumerate and capture hash password of marco users:<br>
 
-1) `sqlite3 users.db`<br>
-2) `.tables` -> to see table names -> We have `user` table<br>
-3) `.schema` -> to see schema of tables -> we can see `password_hash` and `username` schemas for user table<br>
+1) `sqlite3 users.db`</br>
+2) `.tables` -> to see table names -> We have `user` table</br>
+3) `.schema` -> to see schema of tables -> we can see `password_hash` and `username` schemas for user table</br>
 4) `select password_hash, username from user;` -> to see password hash of marco user.</br>
 
 After we get the hash we can use crackstation.net to crack the hash then we will simply login to marco using ssh<br>
